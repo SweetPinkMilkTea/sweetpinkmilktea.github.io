@@ -1,0 +1,65 @@
+@keyframes CoverBob {
+	from { transform: perspective(50vw) rotateX(10deg) rotateY(15deg) rotateZ(2deg); }
+	to { transform: perspective(50vw) rotateX(-5deg) rotateY(25deg) rotateZ(-4deg); }
+}
+
+body {
+    height: 100vh;
+    background: black;
+    color: white;
+    font-family: Bahnschrift, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.container {
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 40px;
+}
+.container > *:not(.wrap) {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    background: fixed repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05) 10px,
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(255, 255, 255, 0.1) 20px
+      );
+    color: gray;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 1s ease;
+}
+a:hover {
+    color: rgb(255, 102, 250);
+    border: 1px solid rgb(255, 102, 250);
+}
+h1 {
+    text-align: center;
+}
+.pfp {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    animation: 10s CoverBob cubic-bezier(.41,.01,.54,.97) alternate infinite
+}
+.wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
