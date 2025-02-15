@@ -84,7 +84,7 @@ h1 {
     width: 200px;
     max-width: 20vw;
     border-radius: 20px;
-    animation: 10s CoverBob cubic-bezier(.41,.01,.54,.97) alternate infinite
+    animation: 4s CoverBob cubic-bezier(.41,.01,.54,.97) alternate infinite
 }
 .wrap {
     position: absolute;
